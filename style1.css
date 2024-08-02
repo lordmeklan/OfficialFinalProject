@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url(newpic1.jpg);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    background-color: rgb(193, 88, 9);
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 36px;
+    color: azure;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: azure;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px 10px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: rgb(213, 139, 1);
+    transition: width 0.3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.navbar a:hover {
+    color: rgb(213, 139, 1);
+    text-decoration: underline;
+}
+
+/* Positioning for <h1> */
+h1 {
+    margin: 0;
+    padding-top: 70px;
+    padding-right: 10px; /* Adjust according to navbar height */
+    width: 40vw; /* Take up half of the viewport width */
+    position: absolute; /* Allows for absolute positioning */
+    top: 70px; /* Adjust according to navbar height */
+    right: 0; /* Aligns to the right side of the viewport */
+    box-sizing: border-box; /* Ensures padding is included in width */
+    text-align: center; /* Align text to the right */
+    font-size: 2vw; /* Adjust font size relative to viewport width */
+    color: rgb(255, 255, 255); /* Optional: color to match the theme */
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: grey;
+    color:white;
+    text-align: center;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+}
